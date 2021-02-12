@@ -20,5 +20,9 @@ defmodule Practice do
     Practice.Factor.factor(x)
   end
 
-  # TODO: Add a palindrome? function.
+  def palindrome?(str) do
+    word_list = String.graphemes(str)
+    rev_word_list = Enum.reverse(word_list)
+    word_list == rev_word_list
+  end
 end
